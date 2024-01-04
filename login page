@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add the Font Awesome library for the eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+</head>
+<style>
+/* Existing styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('assets/img/loginimg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    background-color:#ffffff;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border: 2px solid #113366;
+    border-radius: 15px;
+}
+
+input[type="email"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #123456;
+    border-radius: 5px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+h2 {
+    font-size: 20px;
+    position: relative;
+}
+
+.logoo {
+    position: absolute;
+    top: 50px; /* Adjust this value to position the image properly */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logoo img {
+    width: 100px; /* Adjust the width of the image as needed */
+    height: auto; /* Letting the height adjust proportionally */
+}
+
+/* New styles for the password toggle */
+.password-container {
+    position: relative;
+}
+</style>
+<body>  
+
+    <div class="login-container">
+        <div class="logoo"><img src="assets/img/logo.png" alt="Login Image"></div> <br><br><br><br>
+        <h2>Login</h2>
+        <form id="login-form" action="login.php" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>
 
